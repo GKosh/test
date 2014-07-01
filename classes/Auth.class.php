@@ -81,7 +81,7 @@ class User
             )
         );
         $this->user = $sth->fetch();
-        
+
         if (!$this->user) {
             $this->is_authorized = false;
         } else {

@@ -24,12 +24,12 @@ require_once 'classes/Auth.class.php';
 
       <?php if (Auth\User::isAuthorized()): ?>
     
-      <h1>Your are welcome!</h1>
+      <h1>Добро пожаловать!</h1>
 
       <form class="ajax" method="post" action="./ajax.php">
           <input type="hidden" name="act" value="logout">
           <div class="form-actions">
-              <button class="btn btn-large btn-primary" type="submit">Logout</button>
+              <button class="btn btn-large btn-primary" type="submit">Выход</button>
           </div>
       </form>
 
@@ -38,17 +38,17 @@ require_once 'classes/Auth.class.php';
       <form class="form-signin ajax" method="post" action="./ajax.php">
         <div class="main-error alert alert-error hide"></div>
 
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input name="username" type="text" class="input-block-level" placeholder="Username" autofocus>
-        <input name="password" type="password" class="input-block-level" placeholder="Password">
+        <h2 class="form-signin-heading">Вход/авторизация</h2>
+        <input name="username" type="text" class="input-block-level" placeholder="Имя пользователя" autofocus>
+        <input name="password" type="password" class="input-block-level" placeholder="Пароль">
         <label class="checkbox">
-          <input name="remember-me" type="checkbox" value="remember-me" checked> Remember me
+          <input name="remember-me" type="checkbox" value="remember-me" checked> Запомнить меня.
         </label>
         <input type="hidden" name="act" value="login">
-        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+        <button class="btn btn-large btn-primary" type="submit">Войти</button>
     
         <div class="alert alert-info" style="margin-top:15px;">
-            <p>Not have an account? <a href="/register.php">Register it.</a>
+            <p>Нет аккаунта? <a href="/register.php"> Регистрация!</a>
         </div>
       </form>
 
@@ -56,7 +56,7 @@ require_once 'classes/Auth.class.php';
 
     </div> <!-- /container -->
 
-    <script src="./vendor/jquery-2.0.3.min.js"></script>
+   <script src="./vendor/jquery-2.0.3.min.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/ajax-form.js"></script>
 

@@ -1,18 +1,15 @@
-!(function($) {
+﻿!(function($) {
     'use strict';
 
     var script = {};
 
     script.ajax = {
-        errorMessage: tr('error:ajax-request'),
-
+       errorMessage: tr('error:ajax-request'),
         ajaxSettings: {
             $loaderEl: $('#loader'),
-
             beforeSend: function() {
                 this.$loaderEl.show();
             },
-
             complete: function() {
                 this.$loaderEl.hide();
             }
@@ -49,7 +46,7 @@
 
         }
     };
-
+	
     script.ajaxform = {
         $forms: null,
 
@@ -139,9 +136,10 @@
                 if (typeof response === 'object') {
                     // mime type application/json responsed
                     data = response;
-                } else {
+                }
+				else {
                     try {
-                        data = JSON.parse(response);
+                       data = JSON.parse(response);
                     } catch (e) {
                         window.alert(tr('error:form-submit'));
                         return;
