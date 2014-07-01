@@ -1,5 +1,5 @@
 test
 ====
-Пример авторизации с использованием Ajax,JQuery,bootstrap запросов
+Пример авторизации с использованием Ajax и фреймворков JQuery,Bootstrap
 
 test project
