@@ -196,7 +196,16 @@
         }
     }
 
-    function tr(params, lang) {
+    
+	function tr(params, lang) {
+	var messsaes = {}, transalted= '', code;
+	messages.ru_Ru = {
+	
+	
+	}
+	
+	}
+	function tr(params, lang) {
             var messages = {}, translated = '',
                 code;
 
@@ -215,7 +224,7 @@
             if (messages[lang] !== undefined && params.length) {
                 for (var i = 0, msgcat = messages[lang]; i < params.length; i++) {
                     code = params[i];
-                    if (typeof msgcat[code] === 'object') {
+                    if (typeof msgcat[code] === 'object' && msgcat[code] !== null) {
                         msgcat = msgcat[code];
                     }
                     if (typeof msgcat[code] === 'string') {

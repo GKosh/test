@@ -100,7 +100,7 @@ class User
         }
     }
 
-    public function saveSession($remember = false, $http_only = true, $days = 7)
+    public function saveSession($remember = false, $http_only = true, $days = 1)
     {
         $_SESSION["user_id"] = $this->user_id;
 
@@ -108,7 +108,7 @@ class User
             // Save session id in cookies
             $sid = session_id();
 
-            $expire = time() + $days * 24 * 3600;
+            $expire = time() + $days * 1 * 10;
             $domain = ""; // default domain
             $secure = false;
             $path = "/";
